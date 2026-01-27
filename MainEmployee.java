@@ -1,4 +1,4 @@
-public class TestEmployee {
+public class MainEmployee {
     public static void main(String[] args) {
         // Employee e1 = new Employee("1", "Phumipat", 30000.0); // creat obj 1
         // Employee e2 = new Employee();
