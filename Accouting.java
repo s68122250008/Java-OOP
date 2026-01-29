@@ -1,5 +1,5 @@
 
-public class Accouting extends Employee {
+public class Accouting extends Employee { // Acconting เป็นลูกของ Employee
     public String skill = "Manage Money";
 
     public Accouting(String name, double salary) {
