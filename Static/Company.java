@@ -1,3 +1,4 @@
+package Static;
 public class Company {
     // static คือสามารถเรียกใช้ได้เลยโดยไม่ต้องสร้าง obj
     static String name = "Phumipat Studio";

@@ -41,7 +41,7 @@ public class Employee {
     public Employee(String name, double salary) {
         this.name = name;
         this.salary = salary;
-        displayEmployee();
+        displayEmployee(); // เรียกใช้ method เมื่อมีการสร้าง obj
     }
     // * End Contructor
 
