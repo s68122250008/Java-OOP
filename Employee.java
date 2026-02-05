@@ -50,4 +50,7 @@ public class Employee {
         System.out.println("Salary = " + this.salary);
     }
 
+    public void bonus() { // * คลาสแม่ของ override
+        System.out.println("Bonus = 10%");
+    }
 }
