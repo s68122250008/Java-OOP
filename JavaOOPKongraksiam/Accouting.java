@@ -1,3 +1,4 @@
+package JavaOOPKongraksiam;
 
 public class Accouting extends Employee { // Acconting เป็นลูกของ Employee
     public String skill = "Manage Money";

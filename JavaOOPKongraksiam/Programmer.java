@@ -1,4 +1,6 @@
+package JavaOOPKongraksiam;
 //  การสืบทอด inheritance จากแม่ Employee
+
 public class Programmer extends Employee { // Programmer เป็นลูกของ Employee
     // public String skill = "java C#";
 

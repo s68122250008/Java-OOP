@@ -1,3 +1,4 @@
+package JavaOOPKongraksiam;
 public class Array2D {
     // Array 2D
     public static void main(String[] args) {
