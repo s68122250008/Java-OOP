@@ -1,5 +1,6 @@
 package Exerise;
 
+// Practice constructor
 public class Book {
     String title;
     String author;
