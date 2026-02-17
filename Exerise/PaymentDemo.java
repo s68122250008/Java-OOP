@@ -8,6 +8,7 @@ interface Payment {
 }
 
 class CashPayment implements Payment { // implements
+    @Override
     public void pay(double amount) {
         System.out.println("Paid " + amount + " by cash");
     }
@@ -20,6 +21,7 @@ class CreditCardPayment implements Payment {
         this.cardNumber = cardNumber;
     }
 
+    @Override
     public void pay(double amount) {
         // เอาเฉพาะเลข 4 ตัวท้าย
         String last4 = cardNumber.substring(cardNumber.length() - 4);
