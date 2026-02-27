@@ -23,7 +23,6 @@ interface Downloadable {
 }
 
 abstract class Media {
-    double result;
     String title;
     double basePrice;
     Producer producer; // Composition: เป็นการสร้าง "ความสัมพันธ์" ว่าวัตถุหนึ่ง "มี"
@@ -39,7 +38,7 @@ abstract class Media {
     abstract double calculateRentalPrice(int days);
 
     void showInfo() {
-        System.out.println("Title: " + this.title + " Producer: " + this.producer.studioName );
+        System.out.println("Title: " + this.title + " Producer: " + this.producer.studioName);
     }
 
 }
@@ -52,7 +51,7 @@ class Movie extends Media {
 
     @Override
     double calculateRentalPrice(int days) {
-        return result = (basePrice * days) + 20;
+        return (basePrice * days) + 20;
     }
 }
 
@@ -63,7 +62,7 @@ class Music extends Media implements Downloadable {
 
     @Override
     double calculateRentalPrice(int days) {
-        return result = (basePrice * days);
+        return (basePrice * days);
     }
 
     @Override
