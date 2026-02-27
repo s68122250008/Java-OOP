@@ -85,8 +85,8 @@ public class MediaRentalSystem {
         inventory.add(new Music("Labanun", 100, gmm));
 
         for (Media item : inventory) {
-            System.out.println("Price: " + item.calculateRentalPrice(7));
             item.showInfo();
+            System.out.println("Price: " + item.calculateRentalPrice(7));
         }
 
         for (Media item : inventory) {
