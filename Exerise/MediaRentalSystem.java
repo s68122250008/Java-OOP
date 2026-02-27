@@ -18,6 +18,10 @@ class Producer {
     }
 }
 
+interface Downloadable {
+    public void download();
+}
+
 abstract class Media {
     double result;
     String title;
@@ -35,7 +39,7 @@ abstract class Media {
     abstract double calculateRentalPrice(int days);
 
     void showInfo() {
-        System.out.println("Title: " + this.title + " Producer: " + this.producer.studioName + " Price: " + result);
+        System.out.println("Title: " + this.title + " Producer: " + this.producer.studioName );
     }
 
 }
@@ -52,7 +56,7 @@ class Movie extends Media {
     }
 }
 
-class Music extends Media {
+class Music extends Media implements Downloadable {
     public Music(String title, double basePrice, Producer producer) {
         super(title, basePrice, producer);
     }
@@ -61,6 +65,11 @@ class Music extends Media {
     double calculateRentalPrice(int days) {
         return result = (basePrice * days);
     }
+
+    @Override
+    public void download() {
+        System.out.println("Dowloading music:" + title);
+    };
 }
 
 public class MediaRentalSystem {
@@ -74,11 +83,18 @@ public class MediaRentalSystem {
         inventory.add(new Movie("Spider-man", 200, marvel));
         inventory.add(new Movie("Super-man", 200, dc));
         inventory.add(new Music("NangFar", 100, gmm));
-        inventory.add(new Movie("Labanun", 100, gmm));
+        inventory.add(new Music("Labanun", 100, gmm));
 
         for (Media item : inventory) {
-            item.calculateRentalPrice(7);
+            System.out.println("Price: " + item.calculateRentalPrice(7));
             item.showInfo();
+        }
+
+        for (Media item : inventory) {
+            item.showInfo();
+            if (item instanceof Downloadable downloadable) {
+                downloadable.download();
+            }
         }
     }
 }
